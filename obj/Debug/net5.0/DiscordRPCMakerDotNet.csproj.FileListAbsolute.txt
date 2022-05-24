@@ -1,0 +1,6 @@
+C:\Users\eleme\Documents\FoxClientInstaller\DiscordRPCMakerDotNet\obj\Debug\net5.0\DiscordRPCMakerDotNet.csproj.AssemblyReference.cache
+C:\Users\eleme\Documents\FoxClientInstaller\DiscordRPCMakerDotNet\obj\Debug\net5.0\DiscordRPCMakerDotNet.csproj.ResolveComReference.cache
+C:\Users\eleme\Documents\FoxClientInstaller\DiscordRPCMakerDotNet\obj\Debug\net5.0\DiscordRPCMakerDotNet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\eleme\Documents\FoxClientInstaller\DiscordRPCMakerDotNet\obj\Debug\net5.0\DiscordRPCMakerDotNet.AssemblyInfoInputs.cache
+C:\Users\eleme\Documents\FoxClientInstaller\DiscordRPCMakerDotNet\obj\Debug\net5.0\DiscordRPCMakerDotNet.AssemblyInfo.cs
+C:\Users\eleme\Documents\FoxClientInstaller\DiscordRPCMakerDotNet\obj\Debug\net5.0\DiscordRPCMakerDotNet.csproj.CoreCompileInputs.cache

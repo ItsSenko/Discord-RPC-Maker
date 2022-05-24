@@ -1,0 +1,2 @@
+C:\Users\eleme\Documents\GitHub\Discord-RPC-Maker\bin\Release\net6.0\publish\win-x86\DiscordRPCMaker.pdb
+C:\Users\eleme\Documents\GitHub\Discord-RPC-Maker\bin\Release\net6.0\publish\win-x86\DiscordRPCMaker.exe
