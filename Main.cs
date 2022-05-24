@@ -243,322 +243,7 @@ namespace DiscordRPCMaker
                             break;
                         }
                         var preset = Presets[value];
-                        Log(Type.Info, $"What would you like to edit in the {preset.Name} Preset?");
-                        Space();
-                        Log(Type.Empty, $"[N] Name: {preset.Name}");
-                        Log(Type.Empty, $"[C] Client ID: {preset.clientId}");
-                        Log(Type.Empty, $"[S] State: {preset.state}");
-                        Log(Type.Empty, $"[D] Details: {preset.details}");
-                        Log(Type.Empty, $"[LI] Large Image Key: {preset.largeImageKey}");
-                        Log(Type.Empty, $"[SI] Small Image Key: {preset.smallImageKey}");
-                        Log(Type.Empty, $"[LT] Large Image Text: {preset.largeImageText}");
-                        Log(Type.Empty, $"[ST] Small Image Text: {preset.smallImageText}");
-                        Log(Type.Empty, $"[BN1] Button 1 Name: {preset.button1Name}");
-                        Log(Type.Empty, $"[BU1] Button 1 Url: {preset.button1Url}");
-                        Log(Type.Empty, $"[BN2] Button 2 Name: {preset.button2Name}");
-                        Log(Type.Empty, $"[BU2] Button 2 Url: {preset.button2Url}");
-                        var a = Console.ReadLine().ToLower();
-                        switch (a)
-                        {
-                            case "n":
-                                {
-                                    Log(Type.Info, $"Please set the new Name for this preset: ", false, false);
-                                    var n = Console.ReadLine();
-                                    Log(Type.Info, $"Your new preset Name will be {n}, Continue?");
-                                    Space();
-                                    Log(Type.Empty, "[Y] Yes");
-                                    Log(Type.Empty, "[N] No");
-                                    if (GetAnswer())
-                                    {
-                                        preset.Name = n;
-                                        SavePreset();
-                                        Log(Type.Success, $"Preset Name changed to {n}, Press enter to return to the Settings Menu");
-                                        var key = Console.ReadKey();
-                                        Settings();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Log(Type.Error, "Invalid Response");
-                                        Settings();
-                                        break;
-                                    }
-                                }
-                            case "c":
-                                {
-                                    Log(Type.Info, $"Please set the new Client ID for this preset: ", false, false);
-                                    var n = Console.ReadLine();
-                                    Log(Type.Info, $"Your new preset Client ID will be {n}, Continue?");
-                                    Space();
-                                    Log(Type.Empty, "[Y] Yes");
-                                    Log(Type.Empty, "[N] No");
-                                    if (GetAnswer())
-                                    {
-                                        preset.clientId = n;
-                                        SavePreset();
-                                        Log(Type.Success, $"Preset Client ID changed to {n}, Press enter to return to the Settings Menu");
-                                        var key = Console.ReadKey();
-                                        Settings();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Log(Type.Error, "Invalid Response");
-                                        Settings();
-                                        break;
-                                    }
-                                }
-                            case "s":
-                                {
-                                    Log(Type.Info, $"Please set the new State for this preset: ", false, false);
-                                    var n = Console.ReadLine();
-                                    Log(Type.Info, $"Your new preset State will be {n}, Continue?");
-                                    Space();
-                                    Log(Type.Empty, "[Y] Yes");
-                                    Log(Type.Empty, "[N] No");
-                                    if (GetAnswer())
-                                    {
-                                        preset.state = n;
-                                        SavePreset();
-                                        Log(Type.Success, $"Preset State changed to {n}, Press enter to return to the Settings Menu");
-                                        var key = Console.ReadKey();
-                                        Settings();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Log(Type.Error, "Invalid Response");
-                                        Settings();
-                                        break;
-                                    }
-                                }
-                            case "d":
-                                {
-                                    Log(Type.Info, $"Please set the new Details for this preset: ", false, false);
-                                    var n = Console.ReadLine();
-                                    Log(Type.Info, $"Your new preset Details will be {n}, Continue?");
-                                    Space();
-                                    Log(Type.Empty, "[Y] Yes");
-                                    Log(Type.Empty, "[N] No");
-                                    if (GetAnswer())
-                                    {
-                                        preset.details = n;
-                                        SavePreset();
-                                        Log(Type.Success, $"Preset Details changed to {n}, Press enter to return to the Settings Menu");
-                                        var key = Console.ReadKey();
-                                        Settings();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Log(Type.Error, "Invalid Response");
-                                        Settings();
-                                        break;
-                                    }
-                                }
-                            case "li":
-                                {
-                                    Log(Type.Info, $"Please set the new Large Image Key for this preset: ", false, false);
-                                    var n = Console.ReadLine();
-                                    Log(Type.Info, $"Your new preset Large Image Key will be {n}, Continue?");
-                                    Space();
-                                    Log(Type.Empty, "[Y] Yes");
-                                    Log(Type.Empty, "[N] No");
-                                    if (GetAnswer())
-                                    {
-                                        preset.largeImageKey = n;
-                                        SavePreset();
-                                        Log(Type.Success, $"Preset Large Image Key changed to {n}, Press enter to return to the Settings Menu");
-                                        var key = Console.ReadKey();
-                                        Settings();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Log(Type.Error, "Invalid Response");
-                                        Settings();
-                                        break;
-                                    }
-                                }
-                            case "si":
-                                {
-                                    Log(Type.Info, $"Please set the new Small Image Key for this preset: ", false, false);
-                                    var n = Console.ReadLine();
-                                    Log(Type.Info, $"Your new preset Small Image Key will be {n}, Continue?");
-                                    Space();
-                                    Log(Type.Empty, "[Y] Yes");
-                                    Log(Type.Empty, "[N] No");
-                                    if (GetAnswer())
-                                    {
-                                        preset.smallImageKey = n;
-                                        SavePreset();
-                                        Log(Type.Success, $"Preset Small Image Key changed to {n}, Press enter to return to the Settings Menu");
-                                        var key = Console.ReadKey();
-                                        Settings();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Log(Type.Error, "Invalid Response");
-                                        Settings();
-                                        break;
-                                    }
-                                }
-                            case "lt":
-                                {
-                                    Log(Type.Info, $"Please set the new Large Image Text for this preset: ", false, false);
-                                    var n = Console.ReadLine();
-                                    Log(Type.Info, $"Your new preset Large Image Text will be {n}, Continue?");
-                                    Space();
-                                    Log(Type.Empty, "[Y] Yes");
-                                    Log(Type.Empty, "[N] No");
-                                    if (GetAnswer())
-                                    {
-                                        preset.largeImageText = n;
-                                        SavePreset();
-                                        Log(Type.Success, $"Preset Large Image Text changed to {n}, Press enter to return to the Settings Menu");
-                                        var key = Console.ReadKey();
-                                        Settings();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Log(Type.Error, "Invalid Response");
-                                        Settings();
-                                        break;
-                                    }
-                                }
-                            case "st":
-                                {
-                                    Log(Type.Info, $"Please set the new Small Image Text for this preset: ", false, false);
-                                    var n = Console.ReadLine();
-                                    Log(Type.Info, $"Your new preset Small Image Text will be {n}, Continue?");
-                                    Space();
-                                    Log(Type.Empty, "[Y] Yes");
-                                    Log(Type.Empty, "[N] No");
-                                    if (GetAnswer())
-                                    {
-                                        preset.smallImageText = n;
-                                        SavePreset();
-                                        Log(Type.Success, $"Preset Small Image Text changed to {n}, Press enter to return to the Settings Menu");
-                                        var key = Console.ReadKey();
-                                        Settings();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Log(Type.Error, "Invalid Response");
-                                        Settings();
-                                        break;
-                                    }
-                                }
-                            case "bn1":
-                                {
-                                    Log(Type.Info, $"Please set the new Button Name for this preset: ", false, false);
-                                    var n = Console.ReadLine();
-                                    Log(Type.Info, $"Your new preset Button Name will be {n}, Continue?");
-                                    Space();
-                                    Log(Type.Empty, "[Y] Yes");
-                                    Log(Type.Empty, "[N] No");
-                                    if (GetAnswer())
-                                    {
-                                        preset.button1Name = n;
-                                        SavePreset();
-                                        Log(Type.Success, $"Preset Button Name changed to {n}, Press enter to return to the Settings Menu");
-                                        var key = Console.ReadKey();
-                                        Settings();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Log(Type.Error, "Invalid Response");
-                                        Settings();
-                                        break;
-                                    }
-                                }
-                                break;
-                            case "bu1":
-                                {
-                                    Log(Type.Info, $"Please set the new Button Url for this preset: ", false, false);
-                                    var n = Console.ReadLine();
-                                    Log(Type.Info, $"Your new preset Button Url will be {n}, Continue?");
-                                    Space();
-                                    Log(Type.Empty, "[Y] Yes");
-                                    Log(Type.Empty, "[N] No");
-                                    if (GetAnswer())
-                                    {
-                                        preset.button1Url = n;
-                                        SavePreset();
-                                        Log(Type.Success, $"Preset Button Url changed to {n}, Press enter to return to the Settings Menu");
-                                        var key = Console.ReadKey();
-                                        Settings();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Log(Type.Error, "Invalid Response");
-                                        Settings();
-                                        break;
-                                    }
-                                }
-                                break;
-                            case "bn2":
-                                {
-                                    Log(Type.Info, $"Please set the new Button Name for this preset: ", false, false);
-                                    var n = Console.ReadLine();
-                                    Log(Type.Info, $"Your new preset Button Name will be {n}, Continue?");
-                                    Space();
-                                    Log(Type.Empty, "[Y] Yes");
-                                    Log(Type.Empty, "[N] No");
-                                    if (GetAnswer())
-                                    {
-                                        preset.button2Name = n;
-                                        SavePreset();
-                                        Log(Type.Success, $"Preset Button Name changed to {n}, Press enter to return to the Settings Menu");
-                                        var key = Console.ReadKey();
-                                        Settings();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Log(Type.Error, "Invalid Response");
-                                        Settings();
-                                        break;
-                                    }
-                                }
-                                break;
-                            case "bu2":
-                                {
-                                    Log(Type.Info, $"Please set the new Button Url for this preset: ", false, false);
-                                    var n = Console.ReadLine();
-                                    Log(Type.Info, $"Your new preset Button Url will be {n}, Continue?");
-                                    Space();
-                                    Log(Type.Empty, "[Y] Yes");
-                                    Log(Type.Empty, "[N] No");
-                                    if (GetAnswer())
-                                    {
-                                        preset.button2Url = n;
-                                        SavePreset();
-                                        Log(Type.Success, $"Preset Button Url changed to {n}, Press enter to return to the Settings Menu");
-                                        var key = Console.ReadKey();
-                                        Settings();
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        Log(Type.Error, "Invalid Response");
-                                        Settings();
-                                        break;
-                                    }
-                                }
-                                break;
-                            default:
-                                {
-                                    Log(Type.Error, "Invalid Response, Resetting...");
-                                    Settings();
-                                }
-                                break;
-                        }
+                        EditPreset(preset);
                     }
                     break;
                 case "b":
@@ -568,6 +253,310 @@ namespace DiscordRPCMaker
                 default:
                     Log(Type.Error, "Invalid Response, Option does not exist, Resetting...");
                     Settings();
+                    break;
+            }
+        }
+        public static void EditPreset(Preset preset)
+        {
+            Log(Type.Info, $"What would you like to edit in the {preset.Name} Preset?");
+            Space();
+            Log(Type.Empty, $"[N] Name: {preset.Name}");
+            Log(Type.Empty, $"[C] Client ID: {preset.clientId}");
+            Log(Type.Empty, $"[S] State: {preset.state}");
+            Log(Type.Empty, $"[D] Details: {preset.details}");
+            Log(Type.Empty, $"[LI] Large Image Key: {preset.largeImageKey}");
+            Log(Type.Empty, $"[SI] Small Image Key: {preset.smallImageKey}");
+            Log(Type.Empty, $"[LT] Large Image Text: {preset.largeImageText}");
+            Log(Type.Empty, $"[ST] Small Image Text: {preset.smallImageText}");
+            Log(Type.Empty, $"[BN1] Button 1 Name: {preset.button1Name}");
+            Log(Type.Empty, $"[BU1] Button 1 Url: {preset.button1Url}");
+            Log(Type.Empty, $"[BN2] Button 2 Name: {preset.button2Name}");
+            Log(Type.Empty, $"[BU2] Button 2 Url: {preset.button2Url}");
+            Log(Type.Empty, $"[B] Back to Settings");
+            var a = Console.ReadLine().ToLower();
+            switch (a)
+            {
+                case "n":
+                    {
+                        Log(Type.Info, $"Please set the new Name for this preset: ", false, false);
+                        var n = Console.ReadLine();
+                        Log(Type.Info, $"Your new preset Name will be {n}, Continue?");
+                        Space();
+                        Log(Type.Empty, "[Y] Yes");
+                        Log(Type.Empty, "[N] No");
+                        if (GetAnswer())
+                        {
+                            preset.Name = n;
+                            SavePreset();
+                            Log(Type.Success, $"Preset Name changed to {n}");
+                            EditPreset(preset);
+                            break;
+                        }
+                        else
+                        {
+                            Log(Type.Error, "Invalid Response");
+                            EditPreset(preset);
+                            break;
+                        }
+                    }
+                case "c":
+                    {
+                        Log(Type.Info, $"Please set the new Client ID for this preset: ", false, false);
+                        var n = Console.ReadLine();
+                        Log(Type.Info, $"Your new preset Client ID will be {n}, Continue?");
+                        Space();
+                        Log(Type.Empty, "[Y] Yes");
+                        Log(Type.Empty, "[N] No");
+                        if (GetAnswer())
+                        {
+                            preset.clientId = n;
+                            SavePreset();
+                            Log(Type.Success, $"Preset Client ID changed to {n}");
+                            EditPreset(preset);
+                            break;
+                        }
+                        else
+                        {
+                            Log(Type.Error, "Invalid Response");
+                            EditPreset(preset);
+                            break;
+                        }
+                    }
+                case "s":
+                    {
+                        Log(Type.Info, $"Please set the new State for this preset: ", false, false);
+                        var n = Console.ReadLine();
+                        Log(Type.Info, $"Your new preset State will be {n}, Continue?");
+                        Space();
+                        Log(Type.Empty, "[Y] Yes");
+                        Log(Type.Empty, "[N] No");
+                        if (GetAnswer())
+                        {
+                            preset.state = n;
+                            SavePreset();
+                            Log(Type.Success, $"Preset State changed to {n}");
+                            EditPreset(preset);
+                            break;
+                        }
+                        else
+                        {
+                            Log(Type.Error, "Invalid Response");
+                            EditPreset(preset);
+                            break;
+                        }
+                    }
+                case "d":
+                    {
+                        Log(Type.Info, $"Please set the new Details for this preset: ", false, false);
+                        var n = Console.ReadLine();
+                        Log(Type.Info, $"Your new preset Details will be {n}, Continue?");
+                        Space();
+                        Log(Type.Empty, "[Y] Yes");
+                        Log(Type.Empty, "[N] No");
+                        if (GetAnswer())
+                        {
+                            preset.details = n;
+                            SavePreset();
+                            Log(Type.Success, $"Preset Details changed to {n}");
+                            EditPreset(preset);
+                            break;
+                        }
+                        else
+                        {
+                            Log(Type.Error, "Invalid Response");
+                            EditPreset(preset);
+                            break;
+                        }
+                    }
+                case "li":
+                    {
+                        Log(Type.Info, $"Please set the new Large Image Key for this preset: ", false, false);
+                        var n = Console.ReadLine();
+                        Log(Type.Info, $"Your new preset Large Image Key will be {n}, Continue?");
+                        Space();
+                        Log(Type.Empty, "[Y] Yes");
+                        Log(Type.Empty, "[N] No");
+                        if (GetAnswer())
+                        {
+                            preset.largeImageKey = n;
+                            SavePreset();
+                            Log(Type.Success, $"Preset Large Image Key changed to {n}");
+                            EditPreset(preset);
+                            break;
+                        }
+                        else
+                        {
+                            Log(Type.Error, "Invalid Response");
+                            EditPreset(preset);
+                            break;
+                        }
+                    }
+                case "si":
+                    {
+                        Log(Type.Info, $"Please set the new Small Image Key for this preset: ", false, false);
+                        var n = Console.ReadLine();
+                        Log(Type.Info, $"Your new preset Small Image Key will be {n}, Continue?");
+                        Space();
+                        Log(Type.Empty, "[Y] Yes");
+                        Log(Type.Empty, "[N] No");
+                        if (GetAnswer())
+                        {
+                            preset.smallImageKey = n;
+                            SavePreset();
+                            Log(Type.Success, $"Preset Small Image Key changed to {n}");
+                            EditPreset(preset);
+                            break;
+                        }
+                        else
+                        {
+                            Log(Type.Error, "Invalid Response");
+                            EditPreset(preset);
+                            break;
+                        }
+                    }
+                case "lt":
+                    {
+                        Log(Type.Info, $"Please set the new Large Image Text for this preset: ", false, false);
+                        var n = Console.ReadLine();
+                        Log(Type.Info, $"Your new preset Large Image Text will be {n}, Continue?");
+                        Space();
+                        Log(Type.Empty, "[Y] Yes");
+                        Log(Type.Empty, "[N] No");
+                        if (GetAnswer())
+                        {
+                            preset.largeImageText = n;
+                            SavePreset();
+                            Log(Type.Success, $"Preset Large Image Text changed to {n}");
+                            EditPreset(preset);
+                            break;
+                        }
+                        else
+                        {
+                            Log(Type.Error, "Invalid Response");
+                            EditPreset(preset);
+                            break;
+                        }
+                    }
+                case "st":
+                    {
+                        Log(Type.Info, $"Please set the new Small Image Text for this preset: ", false, false);
+                        var n = Console.ReadLine();
+                        Log(Type.Info, $"Your new preset Small Image Text will be {n}, Continue?");
+                        Space();
+                        Log(Type.Empty, "[Y] Yes");
+                        Log(Type.Empty, "[N] No");
+                        if (GetAnswer())
+                        {
+                            preset.smallImageText = n;
+                            SavePreset();
+                            Log(Type.Success, $"Preset Small Image Text changed to {n}");
+                            EditPreset(preset);
+                            break;
+                        }
+                        else
+                        {
+                            Log(Type.Error, "Invalid Response");
+                            EditPreset(preset);
+                            break;
+                        }
+                    }
+                case "bn1":
+                    {
+                        Log(Type.Info, $"Please set the new Button Name for this preset: ", false, false);
+                        var n = Console.ReadLine();
+                        Log(Type.Info, $"Your new preset Button Name will be {n}, Continue?");
+                        Space();
+                        Log(Type.Empty, "[Y] Yes");
+                        Log(Type.Empty, "[N] No");
+                        if (GetAnswer())
+                        {
+                            preset.button1Name = n;
+                            SavePreset();
+                            Log(Type.Success, $"Preset Button Name changed to {n}");
+                            EditPreset(preset);
+                            break;
+                        }
+                        else
+                        {
+                            Log(Type.Error, "Invalid Response");
+                            EditPreset(preset);
+                            break;
+                        }
+                    }
+                case "bu1":
+                    {
+                        Log(Type.Info, $"Please set the new Button Url for this preset: ", false, false);
+                        var n = Console.ReadLine();
+                        Log(Type.Info, $"Your new preset Button Url will be {n}, Continue?");
+                        Space();
+                        Log(Type.Empty, "[Y] Yes");
+                        Log(Type.Empty, "[N] No");
+                        if (GetAnswer())
+                        {
+                            preset.button1Url = n;
+                            SavePreset();
+                            Log(Type.Success, $"Preset Button Url changed to {n}");
+                            EditPreset(preset);
+                            break;
+                        }
+                        else
+                        {
+                            Log(Type.Error, "Invalid Response");
+                            EditPreset(preset);
+                            break;
+                        }
+                    }
+                case "bn2":
+                    {
+                        Log(Type.Info, $"Please set the new Button Name for this preset: ", false, false);
+                        var n = Console.ReadLine();
+                        Log(Type.Info, $"Your new preset Button Name will be {n}, Continue?");
+                        Space();
+                        Log(Type.Empty, "[Y] Yes");
+                        Log(Type.Empty, "[N] No");
+                        if (GetAnswer())
+                        {
+                            preset.button2Name = n;
+                            SavePreset();
+                            Log(Type.Success, $"Preset Button Name changed to {n}");
+                            EditPreset(preset);
+                            break;
+                        }
+                        else
+                        {
+                            Log(Type.Error, "Invalid Response");
+                            EditPreset(preset);
+                            break;
+                        }
+                    }
+                case "bu2":
+                    {
+                        Log(Type.Info, $"Please set the new Button Url for this preset: ", false, false);
+                        var n = Console.ReadLine();
+                        Log(Type.Info, $"Your new preset Button Url will be {n}, Continue?");
+                        Space();
+                        Log(Type.Empty, "[Y] Yes");
+                        Log(Type.Empty, "[N] No");
+                        if (GetAnswer())
+                        {
+                            preset.button2Url = n;
+                            SavePreset();
+                            Log(Type.Success, $"Preset Button Url changed to {n}");
+                            EditPreset(preset);
+                            break;
+                        }
+                        else
+                        {
+                            Log(Type.Error, "Invalid Response");
+                            EditPreset(preset);
+                            break;
+                        }
+                    }
+                default:
+                    {
+                        Log(Type.Error, "Invalid Response, Resetting...");
+                        Settings();
+                    }
                     break;
             }
         }

@@ -21,3 +21,4 @@ C:\Users\eleme\Documents\GitHub\Discord-RPC-Maker\obj\Release\net6.0\DiscordRPCM
 C:\Users\eleme\Documents\GitHub\Discord-RPC-Maker\obj\Release\net6.0\ref\DiscordRPCMaker.dll
 C:\Users\eleme\Documents\GitHub\Discord-RPC-Maker\obj\Release\net6.0\DiscordRPCMaker.pdb
 C:\Users\eleme\Documents\GitHub\Discord-RPC-Maker\obj\Release\net6.0\DiscordRPCMaker.genruntimeconfig.cache
+C:\Users\eleme\Documents\GitHub\Discord-RPC-Maker\obj\Release\net6.0\DiscordRPCMaker.csproj.AssemblyReference.cache
