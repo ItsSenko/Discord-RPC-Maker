@@ -28,5 +28,10 @@ This simeple console application is meant to let you have a custom RPC status on
 For support, join the [discord](https://discord.gg/fxpPgHqwUr) and open a ticked or DM me on discord or upload a issue on this github!
 
 
+## Credit
+
+Credit to the [discord-rpc-csharp](https://github.com/Lachee/discord-rpc-csharp) for making this application functional
+
+
 ![Logo](https://imgur.com/7DI9STR.png)
 
